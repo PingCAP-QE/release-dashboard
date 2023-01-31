@@ -32,7 +32,7 @@ const RenderCIJobNameSelector = ({ jobName, setJobName, items }) => {
 
 export const CIJobNameSelector = ({jobName, setJobName}) => {    
     const { isLoading, error, data } = useQuery("CIJobNameSelector", () => {
-        return fetch("http://172.16.5.15:30792/report/jobname")
+        return fetch("http://")
         .then((res) => {
             const data = res.json();
             // console.log(data);

@@ -15,7 +15,7 @@ export const CITips = () => {
             <div>Right now, we only cover result of 1 tasks(unit test) from VerifyCI, and more tasks will be added later.</div>
         </div>;
     const tips2 = "Open unstable insight page";
-    const url = "https://tiinsights.pingcap.net/watch/public/dashboard/2b613238-4910-4d8a-9872-def03dbff468"
+    const url = "";
 
     const CustomWidthTooltip = styled(({ className, ...props }) => (
         <Tooltip {...props} classes={{ popper: className }} />
