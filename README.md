@@ -89,4 +89,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     └── layout/                 # 工程的通用页面布局Layout,方便快速引用
     └── pages/                  # 工程的页面js文件,在routes.js中被快速引用,快速跳转页面
     └── components/             # 工程的通用js组件,在pages/中被使用 (yarn add axios, for remote procedure call)
+    └── config.js               # 工程的配置文件
 ```
