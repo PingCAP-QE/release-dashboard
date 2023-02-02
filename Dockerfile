@@ -1,17 +1,12 @@
-# pull the base image
-FROM node:14.15-alpine
-
-# set the working direction
-WORKDIR /app
-
-# copy config
+# official: https://codefresh.io/docs/docs/learn-by-example/nodejs/react/
+FROM node:14.15-alpine as build-deps
+WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
-
-# install dependencies
-RUN yarn install
-
-# copy all file
+RUN yarn
 COPY . ./
+RUN yarn build
 
-# start app
-CMD ["yarn", "start"]
+FROM nginx:1.12-alpine
+COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
